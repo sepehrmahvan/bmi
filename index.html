@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سامانه بام</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="background.js" defer></script>
+    <style>
+        @font-face {
+            font-family: iransans;
+            src: url(font/AIranianSans.woff2);
+        }
+        body{
+            font-family: iransans;
+            margin: 0;
+            background-image: url(img/1.jpg);
+            background-size: 100%;
+        }
+        /* header */
+        header{
+            background-color: rgba(999,999,999, 90%);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 5vh;
+            padding: 10px 0;
+            z-index: 2;
+        }
+        header a{
+            text-decoration: none;
+        }
+        header div.header-sign-up a{
+            color: #4bc466;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 20px;
+            font-weight: 400;
+        }
+        header div.header-sign-up a:hover{
+            color: #339e35;
+        }
+        header div.header-sign-up i{
+            font-size: 35px;
+            color: #4bc466;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        header div.header-nav{
+            margin-right: 20px;
+        }
+        header div.header-nav a{
+            color: darkgray;
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 10px;
+            font-weight: 400;
+        }
+        header div.header-nav a:hover{
+            color: black;
+        }
+        header div.header-nav i#mobile{
+            background-color: #fe9704;
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            padding: 5px 8px;
+        }
+        header div.header-nav i#guide{
+            background-color: #0eace7;
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            padding: 5px 6px;
+        }
+        header div.header-nav img{
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        /* section */
+        section{
+            width: 100%;
+            overflow: hidden;
+        }
+        section div.user-button{
+            position: absolute;
+            right: -134px;
+            top: 150px;
+            transition: 500ms;
+        }
+        section div.user-button a{
+            background-color: rgba(0, 0, 0, 60%);
+            display: inline-block;
+            padding: 10px 15px;
+            font-weight: 400;
+            border-top-left-radius: 20%;
+            border-bottom-left-radius:20%;
+            font-size: 18px;
+            transition: 500ms;
+            text-decoration: none;
+            color: white;
+        }
+        section div.user-button:hover{
+            position: absolute;
+            right: 0;
+            top: 150px;
+        }
+        /* sign in */
+        section div#sign-in{
+            width: 393px;
+            height: 420px;
+            background-color: rgba(0, 0, 0, 60%);
+            backdrop-filter: blur(8px);
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            transform: translate(50%,-50%);
+            text-align: center;
+            border-radius: 10px;
+            animation-name: sign-in;
+            animation-iteration-count: 1;
+            animation-duration: 1s;
+        }
+        @keyframes sign-in {
+            from{
+                position: absolute;
+                right: -50%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            to{
+                position: absolute;
+                right: 50%;
+                top: 50%;
+                transform: translate(50%,-50%);
+            }
+        }
+        section div#sign-in div.title{
+            background-color: rgba(0, 0, 0, 40%);
+            position: relative;
+            padding: 10px 0;
+        }
+        section div#sign-in div.title h2{
+            color: white;
+            display: inline-block;
+            font-size: 20px;
+        }
+        section div#sign-in div.title i{
+            color: white;
+            display: inline-block;
+            font-size: 24px;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+        }
+        section div#sign-in div.input{
+            padding: 20px 0;
+            margin-top: 10px;
+        }
+        section div#sign-in div.input form input{
+            display: inline-block;
+            padding: 15px 10px;
+            width: 80%;
+            margin-top: 10px;
+            border-radius: 10px;
+            background-color: darkgray;
+            border: 1px solid darkgray;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        section div#sign-in div.input form a#forgotten{
+            color: white;
+            display: inline-block;
+            margin-top: 10px;
+            margin-right: 125px;
+            font-size: 12px;
+        }
+        section div#sign-in div.input form a#entery{
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-top: 30px;
+            padding: 15px 20px;
+            background-color: #1b98e5;
+            border-radius: 10px;
+            width: 75%;
+        }
+        section div#sign-in div.foot-links{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 40%);
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100%;
+        }
+        section div#sign-in div.foot-links a{
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            padding: 20px 0;
+            margin: 0;
+        }
+        section div#sign-in div.foot-links a:hover{
+            color: darkgray;
+        }
+        /* footer */
+        footer{
+            height: 7vh;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,60%);
+            z-index: 3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer a{
+            text-decoration: none;
+            color: white;
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 5px 15px;
+        }
+        footer a:hover{
+            color: darkgray;
+        }
+        footer p{
+            color: white;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        footer div.footer-rightside{
+            margin-right: 20px;
+        }
+        footer div.footer-leftside{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="header-sign-up">
+            <a href="#"><i class="fa-solid fa-circle-plus"></i> ثبت نام در سامانه بام</a>
+        </div>
+        <div class="header-nav">
+            <a href=""><i id="mobile" class="fa-solid fa-mobile-retro"></i> دانلود همراه بام</a>
+            <a href=""><i id="guide" class="fa-brands fa-glide-g"></i> راهنمای سامانه</a>
+            <img src="img/brand-logo.png">
+        </div>
+    </header>
+    <!-- section -->
+    <section>
+        <div class="user-button" id="userbutton">
+            <a href="#sign-in" onclick="userButton()">ورود به سامانه <i class="fa-solid fa-user-lock"></i></a>
+        </div>
+        <div id="sign-in">
+            <div class="title">
+                <h2>سامانه بام بانک ملی ایران</h2>
+                <a href="#" onclick="closeButton()"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <div class="input">
+                <form>
+                    <input type="text" placeholder="نام کاربری" name="username">
+                    <br>
+                    <input type="password" placeholder="رمز ورود" name="password">
+                    <br>
+                    <a href="#" id="forgotten">رمز عبور/نام کاربری را فراموش کرده ام</a>
+                    <a href="#" id="entery">ورود به سامانه</a>
+                </form>
+            </div>
+            <div class="foot-links">
+                <a href="#"><i class="fa-solid fa-user"></i> ثبت نام در سامانه بام</a>
+                <a href="#"><i class="fa-solid fa-mobile-screen-button"></i> غیرفعال‌سازی بام بان</a>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="footer-rightside">
+            <p>تلفن پشتیبانی : 83386-021</p>
+        </div>
+        <div class="footer-leftside">
+            <a href="#">سایت بانک ملی ایران</a>
+            <p>تمامی حقوق متعلق به این سایت برای بانک ملی ایران محفوظ است. Bank Melli Iran - Copyright ©2022</p>
+        </div>
+    </footer>
+</body>
+</html>
